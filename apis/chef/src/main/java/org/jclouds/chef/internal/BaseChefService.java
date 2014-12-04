@@ -173,7 +173,7 @@ public class BaseChefService implements ChefService {
 
    @Override
    public Statement createBootstrapScriptForGroup(String group, @Nullable String nodeName) {
-      return groupToBootScript.apply(group, null);
+      return groupToBootScript.apply(group, nodeName);
    }
 
    @Override
