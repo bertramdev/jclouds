@@ -75,6 +75,16 @@ public interface ChefService {
     * @param group corresponds to a configured
     *              {@link ChefProperties#CHEF_BOOTSTRAP_DATABAG} data bag where
     *              run_list and other information are stored.
+    * @return The script used to bootstrap the node.
+    */
+   Statement createBootstrapScriptForGroup(String group);
+
+   /**
+    * Creates all steps necessary to bootstrap the node.
+    *
+    * @param group corresponds to a configured
+    *              {@link ChefProperties#CHEF_BOOTSTRAP_DATABAG} data bag where
+    *              run_list and other information are stored.
     * @param nodeName The name of the node to create.
     * @return The script used to bootstrap the node.
     */

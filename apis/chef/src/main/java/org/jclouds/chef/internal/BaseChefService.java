@@ -176,6 +176,10 @@ public class BaseChefService implements ChefService {
       return groupToBootScript.apply(group, nodeName);
    }
 
+   public Statement createBootstrapScriptForGroup(String group) {
+      return groupToBootScript.apply(group, null);
+   }
+
    @Override
    public void updateBootstrapConfigForGroup(String group, BootstrapConfig bootstrapConfig) {
       try {
